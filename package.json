@@ -1,0 +1,24 @@
+{
+  "name": "star-api-server",
+  "version": "1.0.0",
+  "description": "User Interface and APIs server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shriram2301/star-api-server.git"
+  },
+  "author": "Shriram Ramanujam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shriram2301/star-api-server/issues"
+  },
+  "homepage": "https://github.com/shriram2301/star-api-server#readme",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "sequelize": "^6.5.0"
+  }
+}
