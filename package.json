@@ -17,9 +17,14 @@
   },
   "homepage": "https://github.com/shriram2301/star-api-server#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
