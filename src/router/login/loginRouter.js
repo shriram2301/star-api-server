@@ -20,7 +20,7 @@ loginRouter.post("/login/auth", async (req, res) => {
     res.send("You Messed UP");
   }
 });
-loginRouter.put("/login/:id", (req, res) => {});
+//loginRouter.put("/login/:id", (req, res) => {});
 
 loginRouter.post("/login", async (req, res) => {
   console.log(req.body);
@@ -37,8 +37,30 @@ loginRouter.post("/login", async (req, res) => {
   }
 });
 
-loginRouter.get("/login/:id", (req, res) => {});
+loginRouter.delete("/login/:id", async (req, res) => {
+  const id = req.params.id;
+  try {
+    if (id) {
+      const login = await Login.findOne({ where: { id: id } });
+      if (login) {
+        await login.destroy();
+        res.send("deleted");
+      } else {
+        res.send("nothing to delete");
+      }
+    }
+  } catch (e) {
+    res.send(e);
+  }
+});
 
-loginRouter.get("/login", (req, res) => {});
+loginRouter.get("/login", async (req, res) => {
+  try {
+    const logins = await Login.findAll();
+    res.send(logins);
+  } catch (e) {
+    res.send(e);
+  }
+});
 
 module.exports = loginRouter;
