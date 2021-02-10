@@ -13,7 +13,7 @@ loginRouter.post("/login/auth", async (req, res) => {
     if (login) {
       res.send(login.toJSON());
     } else {
-      throw Error("You Messed Up");
+      res.sendStatus(404);
     }
   } catch (e) {
     console.error("You messed up");
