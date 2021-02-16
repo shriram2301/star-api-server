@@ -1,8 +1,10 @@
-FROM node:latest
-RUN mkdir -p /app/src
-WORKDIR /app/src
+FROM node:lts
+
+# RUN mkdir -p /app/src
+WORKDIR /usr/app/src
 COPY package.json .
 RUN npm install
 COPY . .
 EXPOSE 8080
-CMD ["node","-r","esm","index.js"]
+
+CMD ["node", "-r","esm", "app.js"]
