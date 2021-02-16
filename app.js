@@ -7,7 +7,7 @@ const loginRouter = require("./src/router/login/loginRouter");
 const app = express();
 const db = config;
 
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 app.use(cors("*"));
